@@ -1,17 +1,18 @@
 from usuario import Usuario
 import datetime
 import pytz
-import json
+import json  #estructurar json
+#import requests   #permite capturar json por internet
 
-import requests
 
-#ruta = "usuario.txt"
 tz_CL = pytz.timezone('America/Santiago')
 datetime_CL = datetime.datetime.now(tz_CL)
 
 instancias = []
 
-with open("usuarios.txt") as users:
+ruta = "usuarios.txt"
+
+with open(ruta) as users:
     linea = users.readline()
     while linea:
         try:
